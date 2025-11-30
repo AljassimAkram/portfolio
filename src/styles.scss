@@ -1,5 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import 'styles/variables';
+
+* {
+  box-sizing: border-box;
+}
+
 html, body {
-  margin: 0;
-  background-color: #262E34;
+  height: 100%;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+main {
+  padding-top: 70px;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
 }
