@@ -1,1 +1,43 @@
-.footer { min-height: 60vh; padding: 4rem 0; }
+@import '../../../styles/variables';
+
+.footer {
+  background: $color-blue;
+  color: #0f1a22;
+  padding: 1.5rem 5rem;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    img {
+      width: 42px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__legal {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 1.5rem 1.5rem;
+
+    &__content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

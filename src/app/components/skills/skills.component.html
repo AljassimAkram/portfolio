@@ -1,1 +1,26 @@
-<div class="skills">Skills section placeholder.</div>
+<section class="skills" id="skills">
+  <div class="section__header">
+    <h2>My Skills</h2>
+  </div>
+
+  <div class="skills__grid">
+    <div class="skill" *ngFor="let skill of skills">
+      <span class="skill__bubble">{{ skill.name.charAt(0) }}</span>
+      <span class="skill__label">{{ skill.name }}</span>
+    </div>
+  </div>
+
+  <div class="skills__learning">
+    <div class="skills__learning-title">I am currently learning</div>
+    <div class="skills__learning-list">
+      <div class="learning" *ngFor="let item of learning">
+        <span class="learning__bubble">{{ item.name.charAt(0) }}</span>
+        <span class="learning__label">{{ item.name }}</span>
+      </div>
+    </div>
+    <p class="skills__note">
+      Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new
+      technologies.
+    </p>
+  </div>
+</section>

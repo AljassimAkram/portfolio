@@ -1,1 +1,43 @@
-<div class="contact">Contact section placeholder.</div>
+<section class="contact" id="contact">
+  <div class="section__header">
+    <h2>Contact me</h2>
+  </div>
+
+  <div class="contact__content">
+    <div class="contact__details">
+      <p class="contact__intro">
+        Encourage people to contact you and describe what role you are interested in. Show how you will add value to their projects through your work.
+      </p>
+      <div class="contact__line">
+        <img src="assets/icons/mail-default.png" alt="Email icon" />
+        <span>E-mail: fohrer.developer&#64;gmail.com</span>
+      </div>
+      <div class="contact__line">
+        <img src="assets/icons/🦆 icon _phone_.png" alt="Phone icon" />
+        <span>Tel: 0157 123 456 68</span>
+      </div>
+    </div>
+
+    <form class="contact__form">
+      <div class="contact__row">
+        <label>
+          Your Name
+          <input type="text" name="name" placeholder="Enter your full name" />
+        </label>
+        <label>
+          Your Email
+          <input type="email" name="email" placeholder="Enter your email" />
+        </label>
+      </div>
+      <label>
+        Your Message
+        <textarea name="message" rows="6" placeholder="Tell me a little about your project"></textarea>
+      </label>
+      <label class="contact__consent">
+        <input type="checkbox" />
+        <span>I've read the privacy policy and agree to the processing of my data as outlined.</span>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>

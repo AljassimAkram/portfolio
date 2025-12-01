@@ -1,1 +1,30 @@
-<div class="projects">Projects section placeholder.</div>
+<section class="projects" id="projects">
+  <div class="section__header">
+    <h2>My Projects</h2>
+  </div>
+
+  <div class="projects__list">
+    <article class="project" *ngFor="let project of projects; index as i">
+      <div class="project__number">{{ i + 1 | number: '2.0' }}</div>
+      <div class="project__body">
+        <header class="project__header">
+          <h3>{{ project.title }}</h3>
+          <span class="project__timeline">{{ project.timeline }}</span>
+        </header>
+        <p class="project__description">{{ project.description }}</p>
+        <div class="project__learnings" *ngIf="project.learnings.length">
+          <h4>How I approached it</h4>
+          <ul>
+            <li *ngFor="let item of project.learnings">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="project__tech">
+          <span class="label">Technologies</span>
+          <div class="project__badges">
+            <span class="badge" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

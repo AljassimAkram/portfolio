@@ -1,27 +1,46 @@
-
 <section class="hero">
-  <div class="hero__image-wrapper">
-    <div class="hero__circle"></div>
-    <img src="assets/claudia.png" alt="Claudia Fohrer" class="hero__image" />
+  <div class="hero__socials" aria-label="Contact links">
+    <a href="mailto:fohrer.developer@gmail.com" aria-label="Email">
+      <img src="assets/icons/mail-default.png" alt="Email" />
+    </a>
+    <a href="tel:+491234567890" aria-label="Phone">
+      <img src="assets/icons/phone-default.png" alt="Phone" />
+    </a>
+    <a
+      href="https://maps.google.com"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Location"
+    >
+      <img src="assets/icons/location-pin.svg" alt="Location" />
+    </a>
   </div>
 
-  <div class="hero__text">
-    <div class="hero__sub-logo">
-      <span class="hero__sub-name">C.Fohrer</span>
-      <span class="hero__sub-role">developer</span>
+  <div class="hero__content">
+    <div class="hero__image-wrapper">
+      <div class="hero__circle"></div>
+      <img
+        src="assets/profile.png"
+        alt="Portrait of Claudia Fohrer"
+        class="hero__image"
+      />
     </div>
 
-    <h1>Claudia Fohrer</h1>
-    <h2>FRONTEND DEVELOPER</h2>
+    <div class="hero__text">
+      <div class="hero__sub-logo">
+        <img src="assets/icons/logo-default.png" alt="CFohrer developer logo" />
+        <div class="hero__sub-copy">
+          <span class="hero__sub-name">C.Fohrer</span>
+          <span class="hero__sub-role">developer</span>
+        </div>
+      </div>
 
-    <button class="hero__scroll-btn" (click)="scrollTo('why-me')">
-      ↓
-    </button>
+     <h1>Claudia Fohrer</h1>
+      <h2>FRONTEND DEVELOPER</h2>
+    </div>
   </div>
 
-  <div class="hero__socials">
-    <button aria-label="Mail">✉️</button>
-    <button aria-label="GitHub">🐙</button>
-    <button aria-label="LinkedIn">in</button>
-  </div>
+  <button class="hero__scroll-btn" (click)="scrollTo('why-me')" aria-label="Scroll to Why me section">
+    <img src="assets/icons/arrow-default.png" alt="Scroll down" />
+  </button>
 </section>

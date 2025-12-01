@@ -1,1 +1,113 @@
-.skills { min-height: 60vh; padding: 4rem 0; }
+@import '../../../styles/variables';
+
+.skills {
+  background: $color-blue;
+  color: #0f1a22;
+  padding: 6rem 5rem;
+
+  .section__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.6rem;
+      margin: 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.25rem;
+    justify-items: center;
+  }
+
+  .skill {
+    background: rgba(255, 255, 255, 0.75);
+    width: 170px;
+    height: 170px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    font-weight: 700;
+    color: #0f1a22;
+
+    &__bubble {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #0f1a22;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    &__label {
+      font-size: 1rem;
+    }
+  }
+
+  &__learning {
+    margin-top: 3rem;
+    background: #1b232a;
+    color: $color-text;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  &__learning-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+  }
+
+  &__learning-list {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .learning {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba($color-text, 0.08);
+    padding: 0.85rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid rgba($color-text, 0.18);
+
+    &__bubble {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $color-blue;
+      color: #0f1a22;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+    }
+
+    &__label {
+      font-weight: 600;
+    }
+  }
+
+  &__note {
+    margin: 0;
+    color: rgba($color-text, 0.85);
+  }
+}
+
+@media (max-width: 900px) {
+  .skills {
+    padding: 4rem 1.5rem;
+  }
+}

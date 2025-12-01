@@ -1,1 +1,121 @@
-.projects { min-height: 60vh; padding: 4rem 0; }
+@import '../../../styles/variables';
+
+.projects {
+  background: #1b232a;
+  padding: 6rem 5rem;
+
+  .section__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: 2.6rem;
+      margin: 0;
+      color: $color-blue;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .project {
+    background: $color-bg-dark;
+    border: 1px solid rgba($color-text, 0.08);
+    border-radius: 12px;
+    padding: 1.8rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    &__number {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba($color-blue, 0.2);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: $color-blue;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: $color-text;
+      }
+
+      .project__timeline {
+        font-size: 0.95rem;
+        color: rgba($color-text, 0.8);
+      }
+    }
+
+    &__description {
+      margin: 0.75rem 0 1rem;
+      color: rgba($color-text, 0.9);
+      line-height: 1.6;
+    }
+
+    &__learnings {
+      h4 {
+        margin: 0 0 0.5rem;
+        color: $color-blue;
+      }
+
+      ul {
+        margin: 0;
+        padding-inline-start: 1.1rem;
+        color: rgba($color-text, 0.9);
+        display: grid;
+        gap: 0.35rem;
+      }
+    }
+
+    &__tech {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+
+      .label {
+        font-weight: 600;
+        color: $color-blue;
+      }
+    }
+
+    &__badges {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba($color-blue, 0.2);
+      color: $color-text;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba($color-blue, 0.5);
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .projects {
+    padding: 4rem 1.5rem;
+
+    .project {
+      grid-template-columns: 1fr;
+    }
+  }
+}

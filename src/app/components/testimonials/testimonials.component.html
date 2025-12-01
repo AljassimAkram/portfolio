@@ -1,1 +1,19 @@
-<div class="testimonials">Testimonials section placeholder.</div>
+<section class="testimonials">
+  <div class="section__header">
+    <h2>Need a teamplayer? Here what my colleagues said about me</h2>
+  </div>
+
+  <div class="testimonials__grid">
+    <article class="testimonial" *ngFor="let testimonial of testimonials">
+      <h3>{{ testimonial.name }}</h3>
+      <span class="testimonial__role">{{ testimonial.role }}</span>
+      <p class="testimonial__quote">“{{ testimonial.quote }}”</p>
+      <a
+        class="testimonial__link"
+        href="#"
+        [attr.aria-label]="'Open ' + testimonial.name + ' profile'"
+        >{{ testimonial.project }}</a
+      >
+    </article>
+  </div>
+</section>
