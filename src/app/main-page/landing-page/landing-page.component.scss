@@ -1,0 +1,295 @@
+@import 'styles.scss';
+
+.main-contet {
+    @include dFlex();
+    position: relative;
+    flex-direction: column;
+    height: calc(100vh - 130px);
+    width: 100%;
+    max-width: 1920px;
+}
+
+.title {
+    >h2 {
+        font-family: 'Fira Code';
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #D9D9D9;
+    }
+}
+
+.name {
+    >h1 {
+        font-family: 'Karla';
+        font-size: 128px;
+        color: #D9D9D9;
+    }
+}
+
+.line-left-container {
+    position: absolute;
+    bottom: 0px;
+    left: 96px;
+    @include dFlex();
+    flex-direction: column;
+    gap: 24px;
+}
+
+.line-left {
+    border-left: 1px solid #3DCFB6;
+    height: 240px;
+}
+
+.line-right-container {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    @include dFlex();
+    flex-direction: column;
+    gap: 24px;
+}
+
+.line-right {
+    border-left: 1px solid #3DCFB6;
+    height: 186px;
+}
+
+.email {
+    transform: rotate(-90deg);
+    color: white;
+    font-size: 22px;
+    font-family: 'Karla';
+    position: relative;
+    bottom: 100px;
+
+    &:hover {
+        >a {
+            color: #3DCFB6;
+            cursor: pointer;
+        }
+    }
+}
+
+.slide-text {
+    width: 100%;
+    max-width: 1920px;
+}
+
+.social-media {
+    width: 100%;
+    max-width: 1920px;
+}
+
+.arrow-down {
+    width: 30px;
+    height: 48px;
+    border: 1px solid #3DCFB6;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.bounce-button {
+    animation: floatUpDown 2s ease-in-out infinite;
+    position: relative;
+}
+
+.email-container {
+    display: none !important;
+}
+
+.github-container,
+.linkedin-container,
+.email-container {
+    @include dFlex();
+    position: relative;
+
+    >span {
+        font-size: 26px;
+        color: #3DCFB6;
+        position: absolute;
+        top: 2px;
+        right: -10px;
+        display: none;
+    }
+}
+
+.github-container:hover,
+.linkedin-container:hover,
+.email-container:hover {
+    >a {
+        display: none;
+    }
+
+    .github-hover {
+        display: block;
+    }
+
+    .dot {
+        display: block
+    }
+
+    .linkedin-hover {
+        display: block
+    }
+
+    .email-hover {
+        display: block
+    }
+}
+
+.social {
+    @include dFlex();
+    flex-direction: column;
+    width: 60px;
+}
+
+.github-hover,
+.linkedin-hover,
+.email-hover {
+    display: none;
+}
+
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        top: 0;
+    }
+
+    50% {
+        top: 10px;
+
+    }
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid white;
+    border-radius: 100px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Karla';
+    text-decoration: none;
+    font-weight: 500;
+    transition: border 0.3s, color 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-outline:hover {
+    border: 1px solid #3DCFB6;
+    color: #3DCFB6;
+}
+
+.slide-text {
+    display: inline-block;
+    transition: transform 3s ease;
+}
+
+.btn-outline:hover .slide-text {
+    animation: slide-reset 3s ease-in-out infinite;
+}
+
+@keyframes slide-reset {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    49% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1090px) {
+    .email {
+        display: none;
+    }
+
+    .email-container {
+        display: block !important;
+    }
+
+    .line-left-container {
+        left: 16px;
+    }
+
+    .line-right-container {
+        right: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .title {
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    .name {
+        h1 {
+            font-size: 84px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .slide-text {
+        width: 101%;
+    }
+}
+
+@media (max-width: 650px) {
+    .title {
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .name {
+        h1 {
+            font-size: 62px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width:420px) {
+    .title {
+        h2 {
+            font-size: 18px;
+        }
+    }
+
+    .name {
+        h1 {
+            font-size: 42px;
+        }
+    }
+}
+
+@media (max-width: 1000px) and (max-height: 450px) {
+    .main-contet {
+        height: 120vh;
+    }
+}

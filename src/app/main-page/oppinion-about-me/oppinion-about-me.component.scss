@@ -1,0 +1,21 @@
+@import 'styles.scss';
+
+h1 {
+  font-size: 32px;
+}
+
+.oppinion-container {
+  @include dFlex();
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
+  background-color: #1c1c1c;
+  overflow-x: hidden;
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+}

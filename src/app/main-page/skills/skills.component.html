@@ -1,0 +1,51 @@
+<div class="content" id="skills" data-aos="fade-down" data-aos-duration="2000">
+    <div>
+        <div class="title">
+            <h1>{{"technologies" | translate }}</h1>
+        </div>
+        <div class="skill-container">
+            <div>
+                <h1>{{"skillSet" | translate }}</h1>
+            </div>
+            <div>
+                <p>{{"skillSetDescription" | translate }}</p>
+            </div>
+            <div class="contact-me">
+                <h2>{{"youNeed" | translate }} <span>{{"anotherSkill" | translate }}</span> </h2>
+            </div>
+            <div>
+                <p>{{"needAnotherSkillText" | translate }}</p>
+            </div>
+            <div class="buttons-container">
+                    <a class="btn-outline" href="#contact-me"><span class="slide-text">{{"letsTalk" | translate }}</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="skill-icons">
+        <app-images-card class="icon" *ngFor="let img of imageData" [imageSrc]="img.imageSrc" [text]="img.text"
+            (mouseenter)="onMouseEnter(img)" [isHovered]="hoveredSkill === img" (mouseleave)="onMouseLeave()">
+        </app-images-card>
+        <div class="icons">
+            <div class="tech-card">
+                <p [innerHTML]="'specialInterest' | translate"></p>
+              
+                <div class="tech-icons">
+                  <div class="tech-item">
+                    <img src="assets/img/React.png" alt="React Icon">
+                    <span>React</span>
+                  </div>
+                  <div class="tech-item">
+                    <img src="assets/img/Vuejs.png" alt="Vue Icon">
+                    <span>Vue Js</span>
+                  </div>
+                </div>
+              </div>
+            <div class="icon">
+                <img src="assets/img/mindset-icon.png" alt="">
+            </div>
+            <div class="title">
+                <p>Growth mindset</p>
+            </div>
+        </div>
+    </div>
+</div>

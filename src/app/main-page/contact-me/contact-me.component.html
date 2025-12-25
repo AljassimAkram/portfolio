@@ -1,0 +1,28 @@
+<div class="contact-me-container" id="contact-me" data-aos="zoom-in-down" data-aos-duration="1000"
+    data-aos-anchor-placement="top-center">
+    <div class="container-left">
+        <div>
+            <h2>{{"contactMe" | translate }}</h2>
+        </div>
+        <div class="title">
+            <h1>{{"letsWork" | translate }}</h1>
+            <h1>{{"together" | translate }}</h1>
+        </div>
+        <div>
+            <h2>{{"problemSlove" | translate }}</h2>
+        </div>
+        <div class="work-description">
+            <p>{{"problemDescription" | translate }}</p>
+            <br>
+            <p>{{"problemContact" | translate}} <span>{{"letConnect" | translate }}</span></p>
+        </div>
+    </div>
+    <div class="contat-form">
+        <app-contact-form (messageSent)="onMessageSent($event)"></app-contact-form>
+    </div>
+    <div *ngIf="messageSent" class="message-feedback">
+        <div class="msg-box">
+            <h2>{{"feedbackMsg" | translate }}</h2>
+        </div>
+    </div>
+</div>

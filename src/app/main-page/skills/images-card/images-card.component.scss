@@ -1,0 +1,33 @@
+@import 'styles.scss';
+
+
+.icons {
+    @include dFlex();
+    flex-direction: column
+}
+
+.icon {
+    @include dFlex();
+    flex-direction: column;
+
+    &.hover {
+        transform: scale(1.1);
+    }
+
+    >img {
+
+        height: 60px;
+        width: 60px;
+    }
+}
+
+.title {
+    width: 90px;
+
+    >p {
+        color: white;
+        padding-top: 8px;
+        font-size: 18px;
+        text-align: center;
+    }
+}

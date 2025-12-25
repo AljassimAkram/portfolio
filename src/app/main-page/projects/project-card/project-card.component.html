@@ -1,0 +1,24 @@
+<div class="content">
+  <div>
+    <div *ngFor="let project of projects; let i = index" class="project" (mouseenter)="onMouseEnter(project)"
+      (mouseleave)="onMouseLeave()" (click)="openModal(i)">
+      <div class="project-name">
+        <h3>{{ project.projectName }}</h3>
+        <img class="arrow" src="assets/img/arrow_outward.png" alt="">
+      </div>
+      <div class="projects-skills">
+        <div class="skill" *ngFor="let skill of project.skills; let i = index">
+          <span class="pipe" *ngIf="i > 0">|</span>
+          <p>{{ skill }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="hoveredProject" class="project-img">
+    <div class="img-shadow">
+      <div class="hover">
+        <img class="hover-img" [src]="hoveredProject.imageURL" alt="">
+      </div>
+    </div>
+  </div>
+</div>
